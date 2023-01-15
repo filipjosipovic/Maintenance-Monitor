@@ -53,4 +53,8 @@ You can use external resources as long as you mark them: “ // taken from: <URL
 All elements must be present in the documentation.
 
 ## References
-NYI
+
+![image](https://user-images.githubusercontent.com/55580858/212547334-e83be708-80d6-49bb-b9ff-92b6c14dd657.png)
+
+![image](https://user-images.githubusercontent.com/55580858/212547361-28569580-f6fe-4d9d-aed6-a11af294e81d.png)
+

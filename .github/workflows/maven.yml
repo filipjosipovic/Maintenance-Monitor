@@ -35,7 +35,7 @@ jobs:
         # Artifact name
         name: deployable
         # A file, directory or wildcard pattern that describes what to upload
-        path: MaintenanceMonitor/target/*.jar
+        path: Maintenance-Monitor/target/*.jar
         # The desired behavior if no files are found using the provided path.
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive

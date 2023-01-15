@@ -23,7 +23,7 @@ public class MaintenanceMonitorController {
     @RequestMapping("/maintMessage/{message}")
     public String writeMessage(@PathVariable("message") String message) {
         this.message=message;
-        return (message.equals("ok")) ? "Seems alright" : "Error occured. Message: "+message;
+        return (message.equals("ok")) ? "Everything operates as expected" : "Error occured. Message: "+message;
     }
 
 }

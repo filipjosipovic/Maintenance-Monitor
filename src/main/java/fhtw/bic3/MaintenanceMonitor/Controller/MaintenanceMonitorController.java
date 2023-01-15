@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class MaintenanceMonitorController {
 
 
-    public String message="0";
+    public String message="start";
 
     @GetMapping("/maintMode/")
     public ResponseEntity<String> displayMessage() {

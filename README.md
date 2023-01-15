@@ -6,9 +6,13 @@ We are a small hydro-power electricity supplier near Vienna. Our customers expec
 
 ## Project
 A team of max 3 members should implement a REST-based application in Java (using Spring Boot). The service should be able to manage a centrally stored message. It should be able to
+
 -) deliver the message to a client
+
 -) set it to a specific message
+
 -) reset the message
+
 using its API.
 
 ## Requirements
@@ -17,9 +21,13 @@ Use GitHub for the project and follow the correct DevOps procedure. Use a Kanban
 Document
 
 -) the whole process
+
 -) the user stories
+
 -) the repository URL (it has to be public)
+
 -) the usage of the software
+
 
 in a PDF file with screenshots and explanatory text. Submit the code (including the .git folder) as a .zip file.
 
@@ -28,12 +36,19 @@ You can use external resources as long as you mark them: “ // taken from: <URL
 ## Points
 
 -) 20% Documentations of the process
+  
 -) 15% Requirement Definition (User Stories)
+  
 -) 15% Correct Status / Linking / Branching (Kanban, git)
+  
 -) 15% Implementation
+  
 -) 15% Testing
+  
 -) 10% Continuous Integration (Pipeline Testing)
+  
 -) 10% Continuous Delivery (Pipeline Artifact)
+  
 
 All elements must be present in the documentation.
 

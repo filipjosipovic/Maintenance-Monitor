@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Maintenance Monitor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html { height:100% }
+        body { height:100% }
+        .container-fluid {height:100%}
+        .container-fluid > * {width: 100%;}
+        #updated { font-size: xx-small; }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container-fluid d-flex">
+        <div class="d-flex align-items-center justify-content-center">
+            <div id="mainContent">
+                <h1> Maintenance Monitor </h1>
+				<h3 style="text-align:right; font-size:15px; font-weight:bold; font-style:italic"> SINANOVIC, ARSLAN, JOSIPOVIC </h3>
+                <p id="message" class="text-center">no information</p>
+                <p id="updated" class="text-center"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var containerControl = document.getElementById('container');
+        var messageControl = document.getElementById('message');
+        var updateControl = document.getElementById('updated');
+
+        function checkState() {
+            fetch('http://localhost:8080/maintMode/').then(response => {
+                response.text().then(text => {
+                    
+                    // https://cssgradient.io/
+                    if(text == '0') {
+                        messageControl.innerText = "Everything looks good";
+                        containerControl.style.background = 'radial-gradient(circle, rgba(0,255,21,1) 0%, rgba(255,255,255,1) 100%)';
+                    } else {
+                        messageControl.innerText = "Error occured. Message: "+text;
+                        containerControl.style.background = 'radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 100%)';
+                    }
+
+                });
+                updateControl.innerText = 'last update: ' + (new Date()).toLocaleTimeString()
+            }).catch((reason)=> {
+                messageControl.innerText = "Error occured. No message was found.";
+                containerControl.style.background = 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%)';
+                updateControl.innerText = 'last update: ' + (new Date()).toLocaleTimeString()
+            });
+        };
+
+        checkState();
+        setInterval(checkState, 5000);
+    </script>
+</body>
+
+</html>

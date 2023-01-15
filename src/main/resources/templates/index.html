@@ -43,7 +43,7 @@
                 response.text().then(text => {
                     
                     // https://cssgradient.io/
-                    if(text == '0') {
+                    if(text == 'ok') {
                         messageControl.innerText = "Everything looks good";
                         containerControl.style.background = 'radial-gradient(circle, rgba(0,255,21,1) 0%, rgba(255,255,255,1) 100%)';
                     } else {
